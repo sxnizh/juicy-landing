@@ -105,6 +105,10 @@ body {
     height: 385px;
 }
 
+button {
+    -webkit-tap-highlight-color: transparent;
+}
+
 .hide {
     display: none;
 }
@@ -577,7 +581,7 @@ body {
         grid-template:  "freshy freshy freshy healthy" 1fr
                         "slider-arrows slider-arrows slider-arrows healthy" 400px
                         "thirsty thirsty thirsty thirsty" 1fr
-                        "slider-dots slider-dots oranges oranges" 1.5fr / 2fr 1fr 1fr 2fr;
+                        "slider-dots slider-dots oranges oranges" 500px / 2fr 1fr 1fr 2fr;
 
 
     }
@@ -601,6 +605,14 @@ body {
     .wrapper-down {
         display: grid;
         grid-template: "juicy" 1fr "footer" 1fr / 100%;
+    }
+
+    .slider-dots__nav {
+        gap: 20px;
+    }
+    .slider-dots__nav-dot {
+        width: 18px;
+        height: 18px;
     }
 
 }
@@ -725,7 +737,7 @@ body {
 
 @media (max-width: 600px) {
     .main {
-        grid-template:  "healthy" 0.7fr "slider-arrows" 518px "freshy" 0.7fr "slider-dots" 1fr "thirsty" 0.7fr "oranges" 1fr / 100%
+        grid-template:  "healthy" 0.7fr "slider-arrows" 518px "freshy" 0.7fr "slider-dots" 500px "thirsty" 0.7fr "oranges" 1fr / 100%
     }
 
     .healthy {
