@@ -233,6 +233,7 @@ button {
 
 .slider-arrows__img {
     filter: brightness(0.7);
+    animation: fade 0.3s;
 }
 
 .slider-arrows__btn-wrapper {
@@ -285,8 +286,8 @@ button {
 }
 
 .slider-dots__img {
-
     filter: brightness(0.9);
+    animation: fade 0.3s;
 }
 
 
@@ -759,4 +760,14 @@ button {
         grid-template:  "healthy" max-content "slider-arrows" 305px "freshy" max-content "slider-dots" 1fr "thirsty" max-content "oranges" 1fr / 100%
     }
 
+}
+
+
+@keyframes fade {
+    from {
+        opacity: 0.5;
+    }
+    to {
+        opacity: 1;
+    }
 }
