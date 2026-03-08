@@ -100,8 +100,13 @@ body {
     opacity: 0.5;
 }
 
-.slider-dots img,.slider-arrows img,.oranges img {
+.slider-dots__img,.slider-arrows__img,.oranges__img {
     width: 100%;
+    height: 385px;
+}
+
+.hide {
+    display: none;
 }
 
 /* HEADER */
@@ -199,6 +204,9 @@ body {
     stroke: var(--dark-blue);
 }
 
+.header__menu {
+    display: none;
+}
 
 /* MAIN */
 
@@ -309,10 +317,12 @@ body {
 }
 
 .slider-dots__nav-dot:hover {
-    background-color: transparent;
     box-shadow: 0 0 0 1px #fff;
 }
 
+.slider-dots__nav-dot--active {
+    background-color: transparent;
+}
 /* FRESHY */
 
 .freshy {
@@ -544,6 +554,10 @@ body {
         justify-self: center;
     }
 
+    .slider-dots__img,.slider-arrows__img,.oranges__img {
+        height: auto;
+    }
+
 }
 
 @media (max-width: 1200px) {
@@ -561,15 +575,11 @@ body {
 
     .main {
         grid-template:  "freshy freshy freshy healthy" 1fr
-                        "slider-arrows slider-arrows slider-arrows healthy" 1.5fr
+                        "slider-arrows slider-arrows slider-arrows healthy" 400px
                         "thirsty thirsty thirsty thirsty" 1fr
                         "slider-dots slider-dots oranges oranges" 1.5fr / 2fr 1fr 1fr 2fr;
 
 
-    }
-
-    .slider-dots,.slider-arrows,.oranges {
-        height: 400px;
     }
 
     .healthy {
@@ -590,14 +600,113 @@ body {
 
     .wrapper-down {
         display: grid;
-        grid-template: "juicy" max-content "footer" 1fr / 100%;
+        grid-template: "juicy" 1fr "footer" 1fr / 100%;
     }
 
 }
 
 @media (max-width: 760px) {
     .header__nav {
-        display: none;;
+        display: none;
+    }
+
+    .header__search {
+        display: none;
+    }
+    
+    .header {
+        grid-template-columns: max-content;
+        grid-template-areas:"title nav-menu"
+                            "nav nav"
+                            "search search";
+        justify-content: space-between;
+        align-items: center;
+
+        padding: 20px 15px;
+    }
+    
+    .header__menu {
+        display: block;
+        grid-area: nav-menu;
+
+        width: 40px;
+        height: 30px;
+
+        position: relative;
+    }
+
+    .header__menu::before,.header__menu::after,.header__menu-line {
+        width: 40px;
+        height: 2px;
+        background-color: #000;
+    }
+
+    .header__menu::before,.header__menu::after {
+        content: "";
+        display: block;
+        position: absolute;
+        left: 0;
+    }
+
+    .header__menu::before {
+        top: 0;
+
+        transition: top 0.3s 0.3s, transform 0.3s;
+    }
+
+    .header__menu::after {
+        bottom: 0;
+
+        transition: bottom 0.3s 0.3s, transform 0.3s;
+    }
+
+    .header__menu--active .header__menu-line {
+        display: none;
+
+    }
+
+    .header__menu--active::before {
+        transform: translateY(-50%) rotate(45deg);
+        top: 50%;
+        
+        transition: top 0.3s, transform 0.3s 0.3s;
+    }
+
+    .header__menu--active::after {
+        transform: translateY(50%) rotate(-45deg);
+        bottom: 50%;
+
+        transition: bottom 0.3s, transform 0.3s 0.3s;
+    }
+
+    .header--mobile {
+        height: auto;
+        padding-bottom: 10px;
+    }
+
+    .header--mobile .header__nav {
+        display: block;
+        padding-top: 30px;
+        width: 100%;
+    }
+
+    .header--mobile .header__search {
+        display: block;
+        padding: 20px;
+    }
+    .header__nav .header__list {
+        gap: 10px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+     .header__list a {
+        padding: 10px;
+     }
+
+    .header__list a::before {
+        display: none;
     }
 
     .footer {
@@ -611,11 +720,12 @@ body {
         display: grid;
         grid-template: "juicy" 1.5fr "footer" 2fr / 100%;
     }
+
 }
 
 @media (max-width: 600px) {
     .main {
-        grid-template:  "healthy" 0.7fr "slider-arrows" 1fr "freshy" 0.7fr "slider-dots" 1fr "thirsty" 0.7fr "oranges" 1fr / 100%
+        grid-template:  "healthy" 0.7fr "slider-arrows" 518px "freshy" 0.7fr "slider-dots" 1fr "thirsty" 0.7fr "oranges" 1fr / 100%
     }
 
     .healthy {
@@ -634,7 +744,7 @@ body {
 
 @media (max-width: 350px) {
     .main {
-        grid-template:  "healthy" max-content "slider-arrows" 1fr "freshy" max-content "slider-dots" 1fr "thirsty" max-content "oranges" 1fr / 100%
+        grid-template:  "healthy" max-content "slider-arrows" 305px "freshy" max-content "slider-dots" 1fr "thirsty" max-content "oranges" 1fr / 100%
     }
 
 }

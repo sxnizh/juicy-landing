@@ -5,13 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./reset.css" />
     <link rel="stylesheet" href="./style.css" />
+    <script src="./script.js" defer></script>
     <title>Organic Juicy</title>
   </head>
   <body>
     <div class="container">
     <header class="header">
       <h1 class="header__title">ORGANIC JUICY CO.</h1>
-      <nav class="header__nav">
+      <nav class="header__nav header__nav--mobile">
         <ul class="header__list">
           <li><a class="header__list-item" href="#!">HOME</a></li>
           <li><a class="header__list-item" href="#!">ABOUT</a></li>
@@ -35,12 +36,25 @@
           />
         </svg>
       </button>
+      <button class="header__menu">
+        <div class="header__menu-line"></div>
+      </button>
     </header>
     <main class="main">
       <div class="slider-arrows">
         <div class="slider-arrows__img-wrapper common-img-wrapper">
           <img
             src="./images/slider-arrows-1.jpg"
+            alt=""
+            class="slider-arrows__img"
+          />
+          <img
+            src="./images/slider-arrows-2.jpg"
+            alt=""
+            class="slider-arrows__img"
+          />
+          <img
+            src="./images/slider-arrows-3.jpg"
             alt=""
             class="slider-arrows__img"
           />
@@ -63,12 +77,19 @@
             alt=""
             class="slider-dots__img"
           />
+          <img
+            src="./images/slider-dots-2.jpg"
+            alt=""
+            class="slider-dots__img"
+          />
+          <img
+            src="./images/slider-dots-3.jpg"
+            alt=""
+            class="slider-dots__img"
+          />
         </div>
         <button class="btn slider-dots__btn u-fade">Start Drinking</button>
         <div class="slider-dots__nav">
-          <div class="slider-dots__nav-dot"></div>
-          <div class="slider-dots__nav-dot"></div>
-          <div class="slider-dots__nav-dot"></div>
         </div>
       </div>
 
