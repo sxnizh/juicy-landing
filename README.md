@@ -21,3 +21,17 @@ https://sxnizh.github.io/organic-juicy/
 - слайдер с точками
 - анимации и hover-эффекты
 - форма в футере
+
+## Как запустить
+
+1. Клонировать репозиторий
+git clone [https://github.com/sxnizh/spacex-landing.git](https://github.com/sxnizh/orgainc-juicy.git)
+
+2. Открыть папку проекта
+cd spacex-landing
+
+3. Открыть `index.html` в браузере
+
+
+## Автор
+https://github.com/sxnizh
