@@ -25,10 +25,10 @@ https://sxnizh.github.io/organic-juicy/
 ## Как запустить
 
 1. Клонировать репозиторий
-git clone [https://github.com/sxnizh/spacex-landing.git](https://github.com/sxnizh/orgainc-juicy.git)
+git clone [https://github.com/sxnizh/spacex-landing.git](https://github.com/sxnizh/juicy-landing.git)
 
 2. Открыть папку проекта
-cd spacex-landing
+cd juicy-landing
 
 3. Открыть `index.html` в браузере
 
