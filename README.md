@@ -28,11 +28,15 @@ https://sxnizh.github.io/juicy-landing/
 
 1. Клонировать репозиторий
 
+```bash
 git clone https://github.com/sxnizh/juicy-landing.git
+```
 
 2. Открыть папку проекта
 
+```bash
 cd juicy-landing
+```
 
 
 3. Открыть `index.html` в браузере
@@ -40,4 +44,3 @@ cd juicy-landing
 ## Автор
 
 [https://github.com/sxnizh](https://github.com/sxnizh)
-
